@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="HTML5, HTML 5, Semantics">
+        <title>Dashboard</title>
+
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, sans-serif;
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+            }
+
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: #102A71;
+                color: white;
+                padding: 15px;
+            }
+
+            .container {
+                display: flex;
+                flex: 1;
+            }
+
+            .sidebar {
+                width: 200px;
+                background-color: #001840;
+                color: white;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .sidebar-content {
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+            }
+
+            .active {
+                padding: 10px;
+                background-color: #F5C400;
+                border-radius: 8px;
+                color: #001840;
+            }
+
+            .inactive {
+                background-color: #001840;
+                padding: 10px;
+                border-radius: 8px;
+            }
+
+            .inactive:hover {
+                background-color: #F5C400;
+                color: #001840;
+                transition: .5s;
+            }
+
+            .inactive:hover .sidebar-content {
+                color: #001840;
+                transition: .5s;
+            }
+
+            .main-content {
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                grid-template-rows: repeat(3, 200px);
+                gap: 15px;
+                padding: 20px;
+                flex: 1;
+                background: #e7e7e7;
+            }
+
+            .sub-content {
+                background: white;
+                color: #001840;
+                box-shadow: 2px 2px 10px rgba(0, 0, 0, .15);
+                border-radius: 15px;
+            }
+
+            .top-content {
+                display: flex;
+                justify-content: space-between;
+                padding: 20px;
+            }
+
+            .bottom-content {
+                padding: 0px 0px 0px 20px;
+                margin-top: -35px;
+            }
+
+            .data {
+                font-size: 3em;
+            }
+
+            .main-sbc {
+                background: #001840;
+                color: white;
+            }
+
+            .reports {
+                grid-column: 1 / span 2;
+                grid-row: 1 span 2;
+            }
+
+            .dot {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 50px;
+                width: 50px;
+                background-color: white;
+                border-radius: 50%;
+                color: #001840;
+                box-shadow: 0px 0px 7px rgba(0, 0, 0, .4);
+            }
+
+            .box {
+                background-color: white;
+                border-radius: 5px;
+                box-shadow: 2px 2px 1px rgba(0, 0, 0, .1);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 18px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <header class="header">Editing Mastery</header>
+
+        <div class="container">
+            <div class="sidebar">
+                <h2>Dashboard</h2>
+                <div class="active">
+                    <a href="index.html" class="sidebar-content active">Home</a>
+                </div>
+                <div class="inactive">
+                    <a href="" class="sidebar-content">Charts</a>
+                </div>
+                <div class="inactive">
+                    <a href="" class="sidebar-content">Forms</a>
+                </div>
+                <div class="inactive">
+                    <a href="" class="sidebar-content">Profile</a>
+                </div>
+                <div class="inactive">
+                    <a href="" class="sidebar-content">Navigation</a>
+                </div>
+            </div>
+            <div class="main-content">
+
+
+                <div class="sub-content main-sbc">
+                    <div class="top-content">
+                    <h3>Earnings</h3>
+                    <div class="dot"><h1>$</h1></div>
+                </div>
+                <div class="bottom-content">
+                    <h1 class="data">$ 163,218</h1>
+                </div>
+                </div>
+
+                
+                <div class="sub-content sbc">
+                    <div class="top-content">
+                    <h3>Projected Revenue</h3>
+                    <div class="dot"><h1>$</h1></div>
+                </div>
+                <div class="bottom-content">
+                    <h1 class="data">$ 243,039</h1>
+                </div>
+                </div>
+
+
+                <div class="sub-content sbc">
+                    <div class="top-content">
+                    <h3>Status</h3>
+                </div>
+                <div class="bottom-content">
+                    <h1 class="data">Running</h1>
+                </div>
+                </div>
+
+
+                <div class="sub-content sbc">
+                    <div class="top-content">
+                    <h3>Shares</h3>
+                </div>
+                <div class="bottom-content">
+                    <h1 class="data">87,432</h1>
+                </div>
+                </div>
+
+
+                <div class="sub-content sbc">
+                    <div class="top-content">
+                    <h3>Likes</h3>
+                </div>
+                <div class="bottom-content">
+                    <h1 class="data">1,425,103</h1>
+                </div>
+                </div>
+
+
+                <div class="sub-content sbc">
+                    <div class="top-content">
+                    <h3>Rating</h3>
+                </div>
+                <div class="bottom-content">
+                    <h1 class="data">4.73</h1>
+                </div>
+                </div>
+
+                <div class="sub-content sbc reports">
+                    <div class="top-content">
+                    <h3>Reports</h3>
+                </div>
+                <div class="bottom-content">
+                    <h1 class="data">No report available.</h1>
+                </div>
+                </div>
+
+
+                <div class="sub-content sbc">
+                    <div class="top-content">
+                    <h3>Subscribers</h3>
+                </div>
+                <div class="bottom-content">
+                    <h1 class="data">302,145</h1>
+                </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+
+</html>
